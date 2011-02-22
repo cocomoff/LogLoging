@@ -3,12 +3,17 @@ package jp.sblog.parabola.app;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.*;
 
 public class LogLogingMain extends Activity {
+	
+	// Preference file
+	public static final String PREFERENCES_FILE_NAME = "Preference";
+	
 	// Category
 	private Spinner spinner;
 	
@@ -43,10 +48,20 @@ public class LogLogingMain extends Activity {
 		l.setText(times);
 	}
 	
+	private void readPref(){
+		SharedPreferences settings = getSharedPreferences(PREFERENCES_FILE_NAME, 0);
+		SharedPreferences.Editor editor = settings.edit();
+		
+		// pass
+	}
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		
+		// Preference
+		readPref();
 		
 		// initialize
 		total = hours = mins = 0;
