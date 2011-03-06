@@ -5,47 +5,62 @@
 	android:orientation="vertical"
 	android:stretchColumns="1"
 	xmlns:android="http://schemas.android.com/apk/res/android">
-	
-	<TableRow android:layout_width="fill_parent" android:padding="5px"
-		android:layout_marginTop="5px" android:layout_marginBottom="5px">
-		<TextView android:id="@+id/text1" android:layout_width="wrap_content"
-			android:layout_height="fill_parent" android:layout_marginTop="10px"
-			android:text="TITLE" android:textSize="22sp" android:typeface="monospace"
-			android:textStyle="bold" android:gravity="left">
-		</TextView>
-		<EditText android:id="@+id/tasktitle" 
-			android:textSize="18sp" android:layout_marginLeft="10px"
-			android:layout_marginRight="10px" />
+	<TableRow android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/tableRow1" android:layout_marginTop="5px" android:layout_marginBottom="5px" android:padding="5px">
+		<TextView android:gravity="left" android:layout_height="fill_parent" 
+				android:textStyle="bold" android:id="@+id/text1" 
+				android:layout_marginTop="10px" android:typeface="monospace" 
+				android:text="TITLE" android:textSize="22sp" android:layout_width="fill_parent" />
+		<EditText android:id="@+id/tasktitle" android:layout_height="wrap_content" 
+				android:textSize="18sp" android:layout_marginRight="10px" android:text=""
+				android:layout_marginLeft="10px" android:layout_width="wrap_content" />
 	</TableRow>
 	
 	<TableRow android:layout_width="fill_parent" android:padding="5px"
 		android:layout_marginTop="5px" android:layout_marginBottom="5px">
-		<TextView android:id="@+id/text2" android:layout_width="wrap_content"
-			android:layout_height="fill_parent" android:layout_marginTop="10px"
+		<TextView android:layout_height="fill_parent" android:layout_marginTop="10px"
 			android:text="CATEGORY" android:textSize="22sp" android:typeface="monospace"
-			android:textStyle="bold" android:gravity="left">
+			android:textStyle="bold" android:gravity="left" android:layout_width="wrap_content" android:id="@+id/text_category">
 		</TextView>
 		<Spinner android:id="@+id/Category" android:layout_marginLeft="10px"
 			android:layout_marginRight="10px" />
 	</TableRow>
 	
-	<TableRow android:layout_width="fill_parent" android:padding="5px"
-		android:layout_marginTop="5px" android:layout_marginBottom="5px">
-		<TextView android:id="@+id/text3" android:layout_marginTop="10px"
-			android:text="TIME" android:textSize="22sp" android:typeface="monospace"
-			android:textStyle="bold" android:gravity="left">
+	<TableRow android:padding="5px"
+		android:layout_marginTop="5px" android:layout_marginBottom="5px" android:layout_width="wrap_content">
+		<TextView android:layout_marginTop="10px"
+			android:text="DATE" android:textSize="22sp" android:typeface="monospace"
+			android:textStyle="bold" android:gravity="left" android:layout_width="50dip" android:id="@+id/text_date">
 		</TextView>
-		<TextView android:id="@+id/timetext" android:layout_marginTop="10px"
+		<TextView android:layout_marginTop="10px"
 			android:text="" android:textSize="22sp" android:typeface="monospace"
-			android:textStyle="bold" android:gravity="left">
+			android:textStyle="bold" android:gravity="left" android:layout_width="wrap_content" android:id="@+id/datetext">
 		</TextView>
 	</TableRow>
 	
-	<Button android:id="@+id/button1" android:text="+5" />
-	<Button android:id="@+id/button2" android:text="+10" />
-	<Button android:id="@+id/button3" android:text="+30" />
-	<Button android:id="@+id/button4" android:text="+60" />
-		
-	<Button android:id="@+id/submit"
-		android:layout_width="fill_parent" android:text="DONE!" />
+	<TableRow android:padding="5px"
+		android:layout_marginTop="5px" android:layout_marginBottom="5px" android:layout_width="wrap_content">
+		<TextView android:id="@+id/text3" android:layout_marginTop="10px"
+			android:text="TIME" android:textSize="22sp" android:typeface="monospace"
+			android:textStyle="bold" android:gravity="left" android:layout_width="50dip">
+		</TextView>
+		<TextView android:id="@+id/timetext" android:layout_marginTop="10px"
+			android:text="" android:textSize="22sp" android:typeface="monospace"
+			android:textStyle="bold" android:gravity="left" android:layout_width="wrap_content">
+		</TextView>
+	</TableRow>
+	
+	
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<Button android:id="@+id/button1" android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" android:text="+5" android:layout_weight="1"/>
+		<Button android:id="@+id/button2" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="+10" android:layout_weight="1"/>
+		<Button android:id="@+id/button3" android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" android:text="+30" android:layout_weight="1"/>
+		<Button android:id="@+id/button4" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="+60" android:layout_weight="1"/>
+	</LinearLayout>
+	<Button android:id="@+id/submit"  android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" android:text="DONE!" />
 </TableLayout>
